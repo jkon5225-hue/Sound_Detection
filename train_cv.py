@@ -28,7 +28,7 @@ N_SPLITS = 5
 def make_model():
     return RandomForestClassifier(
         n_estimators=200,
-        class_weight="balanced", # ここは文字列なのでエラーになりません
+        class_weight="balanced",
         random_state=RANDOM_STATE,
         n_jobs=-1,
     )
@@ -139,7 +139,7 @@ model.fit(X_train, y_train)
 # 予測確率を取得
 y_proba = model.predict_proba(X_test)
 
-# ★ポイント: デフォルトの0.5ではなく、閾値を調整して異常検出しやすくする（例: 0.4）
+# ★ポイント: デフォルトの0.5ではなく、閾値を調整して異常検出しやすくする
 threshold = 0.35
 y_pred = (y_proba[:, 1] >= threshold).astype(int)
 
