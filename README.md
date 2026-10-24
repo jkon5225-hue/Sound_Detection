@@ -43,21 +43,7 @@
 
 Python 3.9 以上での動作を想定しています。
 
-### 1. `requirements.txt` の作成
-プロジェクトのルートディレクトリに `requirements.txt` を作成し、以下を記述してください。
-
-```text
-numpy
-pandas
-scikit-learn
-librosa
-soundfile
-joblib
-streamlit
-plotly
-```
-
-### 2. ライブラリのインストール
+### 1. ライブラリのインストール
 
 以下のコマンドを実行して必要なパッケージを一括でインストールします。
 
